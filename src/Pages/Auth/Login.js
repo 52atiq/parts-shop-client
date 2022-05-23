@@ -25,6 +25,12 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
+
+    if(user){
+        navigate('/')
+        navigate(from, { replace: true });
+      }
+
     // useEffect( () =>{
     //     if (token) {
     //         navigate(from, { replace: true });
@@ -32,7 +38,7 @@ const Login = () => {
     // }, [token, from, navigate])
 
     if (loading || gLoading) {
-        return <Loading></Loading>
+        return <Loading> </Loading>
     }
 
     if(error || gError){
@@ -100,13 +106,13 @@ const Login = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
+                        <input className='btn w-full max-w-xs text-white  btn-outline btn-secondary' type="submit" value="Login" />
                     </form>
-                    <p><small>New to Doctors Portal <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                    <p><small>New to p-shop <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline"
+                        className="btn btn-outline  btn-outline btn-secondary"
                     >Continue with Google</button>
                 </div>
             </div>

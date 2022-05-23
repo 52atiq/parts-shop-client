@@ -31,6 +31,10 @@ const SignUp = () => {
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
+    if(user){
+        navigate('/')
+        // navigate(from, { replace: true });
+      }
 
     // if (token) {
     //     navigate('/appointment');
@@ -118,13 +122,13 @@ const SignUp = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Sign Up" />
+                        <input className='btn w-full max-w-xs text-white  btn-outline btn-secondary' type="submit" value="Sign Up" />
                     </form>
                     <p><small>Already have an account? <Link className='text-primary' to="/login">Please login</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline"
+                        className="btn btn-outline   btn-secondary"
                     >Continue with Google</button>
                 </div>
             </div>
