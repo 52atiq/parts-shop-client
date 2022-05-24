@@ -1,23 +1,28 @@
 [
-    {
-      "_id": 1,
-      "name": "keyboard",
-      "price": 156,
-      "image": "https://i.ibb.co/yWBd2yR/keypoard-one.jpg",
-      "description": "Best quality product"
-    },
-    {
-      "_id": 1,
-      "name": "mouse",
-      "price": 126,
-      "image": "https://i.ibb.co/tp4zm1c/keypoard-two.jpg",
-      "description": " Very stylish product"
-    },
-    {
-      "_id": 1,
-      "name": "pad",
-      "price": 164,
-      "image": "https://i.ibb.co/Yj7z68q/mousepad.jpg",
-      "description": " Best quality product"
-    }
-  ]
+  {
+    "_id": 1,
+    "name": "keyboard",
+    "price": 156,
+     "available": 1000,
+     "minimum-quantity":100,
+    "image": "https://i.ibb.co/yWBd2yR/keypoard-one.jpg",
+    "description": "Best quality product"
+  },
+  {
+    "_id": 1,
+    "name": "mouse",
+    "price": 126,
+    "available": 1000,
+    "minimum-quantity":100,
+    "image": "https://i.ibb.co/tp4zm1c/keypoard-two.jpg",
+    "description": " Very stylish product"
+  },
+  {
+    "_id": 1,
+    "name": "pad",
+    "price": 164,
+    
+    "image": "https://i.ibb.co/Yj7z68q/mousepad.jpg",
+    "description": " Best quality product"
+  }
+]

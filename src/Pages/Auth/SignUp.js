@@ -31,7 +31,7 @@ const SignUp = () => {
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
-    if(user){
+    if(user || gUser){
         navigate('/')
         // navigate(from, { replace: true });
       }
@@ -47,15 +47,15 @@ const SignUp = () => {
     }
     return (
         <div className='flex h-screen justify-center items-center'>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-inner border-2 border-[#ec4899]">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Sign Up</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
+                            {/* <label className="label">
                                 <span className="label-text">Name</span>
-                            </label>
+                            </label> */}
                             <input
                                 type="text"
                                 placeholder="Your Name"
@@ -73,9 +73,9 @@ const SignUp = () => {
                         </div>
 
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
+                            {/* <label className="label">
                                 <span className="label-text">Email</span>
-                            </label>
+                            </label> */}
                             <input
                                 type="email"
                                 placeholder="Your Email"
@@ -97,9 +97,9 @@ const SignUp = () => {
                             </label>
                         </div>
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
+                            {/* <label className="label">
                                 <span className="label-text">Password</span>
-                            </label>
+                            </label> */}
                             <input
                                 type="password"
                                 placeholder="Password"
