@@ -25,11 +25,9 @@ const PurchaseDetail = () => {
       console.log(quantity);
 
       const purchase = {
-       productId: product._id,
+        productId: product._id,
         productName:product.name,
-       
-     
-         productPerUniPrice: product.price,
+        productPerUniPrice: product.price,
         Email: user.email,
         Name: user.displayName,
         address: event.target.address.value,
@@ -47,11 +45,12 @@ const PurchaseDetail = () => {
         .then(res => res.json())
         .then(data => {
           console.log(data);
+
             if(data.success){
                 toast(`Successfully purchase `)
             }
             else{
-                toast.error(`Already Purchase`)
+                toast(`Already Purchase`)
             }
             // setProduct(null);
             // refetch();
