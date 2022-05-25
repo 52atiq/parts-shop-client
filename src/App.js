@@ -10,6 +10,9 @@ import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrder from './Pages/Dashboard/MyOrder';
+import Review from './Pages/Dashboard/Review';
 
 
 function App() {
@@ -21,11 +24,22 @@ function App() {
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
          <Route path='blog' element={<Blog></Blog>}></Route>
+
       <Route path='/purchase/:purchaseId' element={
           <RequireAuth>
             <ProductDetails> </ProductDetails>
           </RequireAuth>
          }></Route>
+
+      <Route path='dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
+          </RequireAuth>
+         }>
+           <Route index element={<MyOrder></MyOrder>}></Route>
+           <Route path='review' element={<Review></Review>}></Route>
+         </Route>
+
       </Routes>
 
      <Footer></Footer>
