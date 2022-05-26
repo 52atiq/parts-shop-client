@@ -33,6 +33,15 @@ const PurchaseDetail = () => {
         address: event.target.address.value,
         phone: event.target.phone.value,
         Quantity: event.target.quantity.value
+
+        // treatmentId: _id,
+        // treatment: name,
+        // date: formattedDate,
+        // slot,
+        // price,
+        // patient: user.email,
+        // patientName: user.displayName,
+        // phone: event.target.phone.value
     }
 
     fetch('http://localhost:5000/purchase', {

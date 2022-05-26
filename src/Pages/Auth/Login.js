@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-
 import auth from '../../Firebase/Firebase.init';
 import { useForm } from "react-hook-form";
-
 import Loading from '../../Pages/Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-// import useToken from '../../hooks/useToken';
+import useToken from '../../hooks/useToken';
+
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -18,7 +17,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
 
     let signInError;
     const navigate = useNavigate();
@@ -26,16 +25,16 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
 
-    if(user || gUser){
-        navigate('/')
-        navigate(from, { replace: true });
-      }
+    // if(user || gUser){
+    //     navigate('/')
+    //     navigate(from, { replace: true });
+    //   }
 
-    // useEffect( () =>{
-    //     if (token) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [token, from, navigate])
+    useEffect( () =>{
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     if (loading || gLoading) {
         return <Loading> </Loading>
