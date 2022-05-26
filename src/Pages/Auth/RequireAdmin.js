@@ -1,10 +1,10 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
-import auth from '../../Firebase/Firebase.init';
 import Loading from '../../Pages/Shared/Loading';
-import useAdmin from '../../hooks/useAdmin';
 import { signOut } from 'firebase/auth';
+import useAdmin from '../../hooks/useAdmin';
+import auth from '../../Firebase/Firebase.init';
 
 const RequireAdmin = ({children}) => {
     const [user, loading] = useAuthState(auth);
