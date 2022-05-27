@@ -16,6 +16,7 @@ import Review from './Pages/Dashboard/Review';
 import Profile from './Pages/Dashboard/Profile';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Auth/RequireAdmin';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
            <Route path='review' element={<Review></Review>}></Route>
            <Route path='profile' element={<Profile></Profile>}></Route>
            <Route path='users' element={<RequireAdmin> <Users></Users></RequireAdmin>}></Route>
+           <Route path='addProduct' element={<RequireAdmin> <AddProduct></AddProduct></RequireAdmin>}></Route>
          </Route>
 
       </Routes>

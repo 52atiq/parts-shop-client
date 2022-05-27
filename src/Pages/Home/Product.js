@@ -4,6 +4,11 @@ import { useNavigate } from 'react-router-dom';
 const Product = ({product}) => {
     const {_id, name, image, description, price} = product;
 
+    console.log(image)
+    console.log(name);
+    console.log(description)
+    console.log(price)
+
     const navigate= useNavigate();
     const navigateToPurchaseProduct =  id =>{
         navigate(`/purchase/${id}`)
