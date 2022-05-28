@@ -13,7 +13,7 @@ const MyOrder = () => {
 
     useEffect( () =>{
       if(user){
-        fetch(`http://localhost:5000/purchase?Email=${user.email}`, {
+        fetch(`https://boiling-meadow-00711.herokuapp.com/purchase?Email=${user.email}`, {
             method: 'GET',
             headers:{
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -52,7 +52,7 @@ const MyOrder = () => {
                     <th>Price</th>
                     
                     <th>Email</th>
-                    <th>Purchase</th>
+                    {/* <th>Purchase</th> */}
                 </tr>
                 </thead>
                 <tbody>
@@ -64,7 +64,7 @@ const MyOrder = () => {
                             <td>${order.price}</td>
                            
                             <td>{user.email}</td>
-                            <td>Blue</td>
+                            {/* <td>Blue</td> */}
                         </tr>)
                     }
               

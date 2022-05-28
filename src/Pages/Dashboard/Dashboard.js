@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div class="drawer drawer-mobile">
   <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content ">
-      <h2 className='text-2xl font-bold text-amber-500'> Welcome to Dashboard</h2>
+      <h2 className='text-2xl font-bold text-amber-500 mt-10'> Welcome to Dashboard</h2>
      <Outlet> </Outlet>
     {/* <label for="dashboard-sidebar" class="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
   
@@ -26,6 +26,7 @@ const Dashboard = () => {
       { admin &&  <>
         <li><Link to='/dashboard/users'> All User</Link></li>
         <li><Link to='/dashboard/addProduct'> Add a Product</Link></li>
+        <li><Link to='/dashboard/manageProduct'> Manage Product</Link></li>
       </>}
     </ul>
   

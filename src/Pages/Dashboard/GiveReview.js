@@ -52,7 +52,7 @@ const GiveReview = () => {
             setError(`Enter Value 1 T0 5`);
         }
         else {
-            fetch('http://localhost:5000/reviews', data, {
+            fetch('https://boiling-meadow-00711.herokuapp.com/reviews', data, {
                 method:'POST',
                 Headers:{
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -81,7 +81,7 @@ const GiveReview = () => {
 
             <div className="mt-5">
 
-                <h1 className='text-center'>Submit Your Review</h1>
+                
                 <br />
                 <div className='text-center'>
                     {

@@ -19,6 +19,7 @@ import RequireAdmin from './Pages/Auth/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import NotFound from './Pages/Shared/NotFound';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
            <Route path='profile' element={<Profile></Profile>}></Route>
            <Route path='users' element={<RequireAdmin> <Users></Users></RequireAdmin>}></Route>
            <Route path='addProduct' element={<RequireAdmin> <AddProduct></AddProduct></RequireAdmin>}></Route>
+           <Route path='manageProduct' element={<RequireAdmin> <ManageProduct></ManageProduct> </RequireAdmin>}></Route>
          </Route>
 
       </Routes>

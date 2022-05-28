@@ -5,8 +5,8 @@ import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
 const AddProduct = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
-    const {data: purchases, isLoading} = useQuery('purchases', () => fetch('http://localhost:5000/purchase').then(res => res.json()))
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const {data: purchases, isLoading} = useQuery('purchases', () => fetch('https://boiling-meadow-00711.herokuapp.com/purchase').then(res => res.json()))
 
     const imageStorageKey = 'a746901c99ef4b31d57ec29cde9d6012'
 
@@ -33,7 +33,7 @@ const AddProduct = () => {
                     img: img
                 }
                 // send to your database 
-                fetch('http://localhost:5000/product', {
+                fetch('https://boiling-meadow-00711.herokuapp.com/addProduct', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -43,12 +43,13 @@ const AddProduct = () => {
                 })
                 .then(res =>res.json())
                 .then(inserted =>{
+                    console.log('addproduct', inserted)
                     if(inserted.insertedId){
-                        toast.success('Doctor added successfully')
-                        // reset();
+                        toast.success('product added successfully')
+                        reset();
                     }
                     else{
-                        toast.error('Failed to add the doctor');
+                        toast.error('Failed to add the product');
                     }
                 })
 

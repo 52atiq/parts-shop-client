@@ -13,7 +13,7 @@ const PurchaseDetail = () => {
     const [product,  setProduct] = useState({});
 
     useEffect( () => {
-        const url = `http://localhost:5000/purchase/${purchaseId}`
+        const url = `https://boiling-meadow-00711.herokuapp.com/purchase/${purchaseId}`
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -44,7 +44,7 @@ const PurchaseDetail = () => {
         // phone: event.target.phone.value
     }
 
-    fetch('http://localhost:5000/purchase', {
+    fetch('https://boiling-meadow-00711.herokuapp.com/purchase', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
