@@ -12,7 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
-import Review from './Pages/Dashboard/Review';
+import Review from './Pages/Dashboard/GiveReview';
 import Profile from './Pages/Dashboard/Profile';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Auth/RequireAdmin';
