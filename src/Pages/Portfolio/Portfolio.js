@@ -12,7 +12,7 @@ const Portfolio = () => {
                  <div className='flex gap-x-4'>
                       
 
-                     <a className='text-blue-500 font-bold' href="http://" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                     <a className='text-blue-500 font-bold' href="https://52atiq.github.io/Atiqur-Rahman-Portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
                      <a className='text-blue-500 font-bold' href="https://www.linkedin.com/in/atiqur-rahman-05a49621a/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
                      <a className='text-blue-500 font-bold' href="https://www.facebook.com/atiqislambd" target="_blank" rel="noopener noreferrer"> Facebook</a>
                      <a className='text-blue-500 font-bold' href="https://github.com/52atiq" target="_blank" rel="noopener noreferrer"> GitHub</a>

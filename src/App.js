@@ -18,6 +18,7 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Auth/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import Portfolio from './Pages/Portfolio/Portfolio';
+import NotFound from './Pages/Shared/NotFound';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='signup' element={<SignUp></SignUp>}></Route>
          <Route path='blog' element={<Blog></Blog>}></Route>
          <Route path='portfolio' element={<Portfolio></Portfolio> }></Route>
+         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       <Route path='/purchase/:purchaseId' element={
           <RequireAuth>
