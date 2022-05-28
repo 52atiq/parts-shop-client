@@ -15,24 +15,24 @@ const Navbar = () => {
         localStorage.removeItem('accessToken');
     };
 
-    const menuItems = <>
-        <li><Link to="/">Home</Link></li>
+    const menuItems = < >
+        <li className='text-white' ><Link to="/">Home</Link></li>
       
-        <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li className='text-white'><Link to="/blog">Blog</Link></li>
+        {/* <li><Link to="/contact">Contact</Link></li> */}
+        <li className='text-white' ><Link to="/portfolio">Portfolio</Link></li>
         {
-            user && <li><Link to="/dashboard">Dashboard</Link></li>
+            user && <li className='text-white'><Link to="/dashboard">Dashboard</Link></li>
         }
-        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li className='text-white'>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         {
-            user && <h1 className='mt-2 text-xl'>{user.displayName} </h1> 
+            user && <h1 className='mt-2 text-xl text-white'>{user.displayName} </h1> 
             // user && <li><Link >{user.displayName}  </Link></li>
         }
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-slate-900">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -42,7 +42,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">  P-SHOP</a>
+                <a className="btn btn-ghost normal-case text-xl font-mono italic text-white "> <Link to='/'>  PARTS-SHOP  </Link> </a> <br />
+                {/* <span className='text-xl'>we provide laptop parts</span>  */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

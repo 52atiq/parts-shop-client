@@ -21,14 +21,15 @@ const Portfolio = () => {
                 </div>
 
 
-                <div>
+                <div className='font-semibold'>
                     <h2>76/3 ,Kanikaloy 8 no. lane</h2>
                     <h2>Basabo, Kadamtola, Dhaka-1214</h2>
                     <h2>Email: atiqit52@gmail.com</h2>
                     <h2>Mobile: +8801738450678</h2>
                 </div>
             </div>
-  <hr />
+
+  <hr  className='mt-9'/> 
             <div  className='grid lg:grid-cols-2 mt-10' >
                 <div className='w-[300px]'> 
                     <h1 className='text-2xl font-bold mb-4 '>SKILLS</h1>
