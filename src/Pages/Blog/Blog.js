@@ -42,6 +42,12 @@ const Blog = () => {
                      </p>
 
             </div>
+            <div className='mt-5'>
+                <h1 className='text-2xl font-semibold mb-4'>Q5: You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h1>
+                <p>I will use the Array.find() method to implement a search to find products bye name.
+                     </p>
+
+            </div>
 
         </div>
     );
