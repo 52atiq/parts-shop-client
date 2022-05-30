@@ -26,16 +26,17 @@ const Users = () => {
         <th></th>
         <th>Email</th>
         <th>Job</th>
-        <th>Favorite Color</th>
+        <th>User </th>
       </tr>
     </thead>
     <tbody>
      
                      {
-                           users.map((user , index)=><UserRow
+                           users.map((user , index) =><UserRow
                            key={user._id}
                            user={user}
                            refetch={refetch}
+                           index={index}
                            ></UserRow>)
                        }
     

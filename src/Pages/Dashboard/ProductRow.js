@@ -5,7 +5,7 @@ const ProductRow = ({addProduct, index, refetch}) => {
     const {name, price, img, email} = addProduct;
 
 
-    const handleDelete =( email) =>{
+    const handleDelete = (email) =>{
         fetch(`https://boiling-meadow-00711.herokuapp.com/addproduct/${email}`,{
             method:'DELETE',
             headers: {
@@ -16,7 +16,8 @@ const ProductRow = ({addProduct, index, refetch}) => {
         .then(data => {
             console.log(data);
             if(data.deletedCount){
-                toast.success(`${name} is Deleted`)
+                // toast.success(`${name} is Deleted`)
+                toast.success('Deleted successfully')
                 refetch()
             }
         })

@@ -33,7 +33,7 @@ const AddProduct = () => {
                     img: img
                 }
                 // send to your database 
-                fetch('https://boiling-meadow-00711.herokuapp.com/addProduct', {
+                fetch('https://boiling-meadow-00711.herokuapp.com/addproduct', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -63,22 +63,7 @@ const AddProduct = () => {
         return <Loading></Loading>
     }
 
-    // const onSubmit = data => {
-    //     console.log(data);
-    //     const url = `https://murmuring-shore-75057.herokuapp.com/inventory`;
-    //     fetch(url , {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //     .then(res => res.json())
-    //     .then(result =>{
-    //         console.log(result);
-    //     })
-
-    // }
+    
     return (
         <div className='w-100 '>
         <h2 className='text-center'> Please add a Product </h2>
