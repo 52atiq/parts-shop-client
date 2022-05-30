@@ -31,6 +31,8 @@ const AddProduct = () => {
                     description: data.description,
                     // image: data.image,
                     img: img
+                   
+
                 }
                 // send to your database 
                 fetch('https://boiling-meadow-00711.herokuapp.com/addproduct', {

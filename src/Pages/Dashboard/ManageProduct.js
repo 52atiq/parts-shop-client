@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
+import DeleteConfirmModal from './DeleteConfirmModal';
 import ProductRow from './ProductRow';
 
 const ManageProduct = () => {
+  const [deletingProduct, setDeletingProduct] = useState(null)
     const { data: addProducts, isLoading, refetch } = useQuery('addProduct', () => fetch('https://boiling-meadow-00711.herokuapp.com/addproduct', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -37,12 +39,21 @@ const ManageProduct = () => {
           addProduct={addProduct}
           index={index}
           refetch={refetch}
+          setDeletingProduct={setDeletingProduct}
           ></ProductRow>)
       }
     
     </tbody>
   </table>
 </div>
+      {
+     deletingProduct && <DeleteConfirmModal
+     deletingProduct={deletingProduct}
+     refetch={refetch}
+     setDeletingProduct={setDeletingProduct}
+     > </DeleteConfirmModal>
+        
+      }
         </div>
     );
 };

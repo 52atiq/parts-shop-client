@@ -9,7 +9,7 @@ const Services = () => {
     return (
         <div className='mb-10'>
             <div className=''>
-                <h1 className='text-center mt-36 text-2xl font-bold'>OUR SERVICES</h1>
+                <h1 className='text-center mt-36 text-2xl font-bold text-amber-900'>OUR SERVICES</h1>
                 <p className='leading-10 mt-16 text-xl'>
                 From truckloads to individual packages, we handle it all. Whether it needs to be temperature controlled, is fragile or needs to be shipped fast, Smart Warehousing has you covered. To learn more about our services, click below
                 </p>

@@ -23,7 +23,9 @@ const Product = ({product}) => {
           <p>Price: ${price}</p>
           <p>{description}</p>
           <div className="card-actions">
-            <button onClick={() => navigateToPurchaseProduct(_id)} className="btn btn-primary">Buy Now</button>
+
+            {/* <button onClick={() => navigateToPurchaseProduct(_id)} className="btn btn-primary">Buy Now</button> */}
+            <button onClick={() => navigateToPurchaseProduct(_id)}  className='bg-amber-500 p-2 border- rounded mt-9 text-white uppercase font-bold w-[140px] ' >Buy Now</button>
           </div>
         </div>
       </div>

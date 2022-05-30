@@ -8,14 +8,15 @@ const MoreInfo = () => {
                 <img className='w-[500px] h-[400px]' src={ram} alt="" />
             </div>
             <div>
-                <h1 className='text-4xl font-bold'>WE DO THINGS THE SMART WAY
+                <h1 className='text-3xl font-bold text-amber-900'>WE DO THINGS THE SMART WAY
                  </h1>
                  <p className='text-lg leading-9 mt-10'>
                  We are your brand partner and your powerful back-of-the-house solution. Pairing premium technology and automation with decades of industry expertise, we provide our clients peace of mind to focus on their brands, knowing we are staying ahead of the industry’s demands. Our solution ensures your brand is always one step ahead of your customers' expectations.
                  </p>
                  {/* <button className='bg-white border-primary-500 border-2 text-primary-500  font-semibold mt-14 p-3'>More Info</button> */}
 
-                 <button className="btn btn-primary mt-9">More Info</button>
+                 {/* <button className="btn btn-primary mt-9">More Info</button> */}
+                 <button className='bg-amber-500 p-4 border- rounded mt-9 text-white uppercase font-bold w-[200px] ' >More Info</button>
             </div>
         </div>
     );

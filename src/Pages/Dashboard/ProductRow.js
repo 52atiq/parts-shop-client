@@ -1,27 +1,10 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const ProductRow = ({addProduct, index, refetch}) => {
+const ProductRow = ({addProduct, index, refetch, setDeletingProduct}) => {
     const {name, price, img, email} = addProduct;
-
-
-    const handleDelete = (email) =>{
-        fetch(`https://boiling-meadow-00711.herokuapp.com/addproduct/${email}`,{
-            method:'DELETE',
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.deletedCount){
-                // toast.success(`${name} is Deleted`)
-                toast.success('Deleted successfully')
-                refetch()
-            }
-        })
-    }
+         
+  
 
     return (
         <tr>
@@ -35,7 +18,11 @@ const ProductRow = ({addProduct, index, refetch}) => {
         {/* <td>{description}</td> */}
        
         <td>{price}</td>
-        <td> <button onClick={() => handleDelete(email)} className='btn btn-xs btn-error'>Delete</button> </td>
+        <td>
+        <label onClick={() => setDeletingProduct(addProduct)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+    
+             
+         </td>
       </tr>
     );
 };
