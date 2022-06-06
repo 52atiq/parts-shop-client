@@ -1,7 +1,12 @@
 PARTS-SHOP
 
 Live Link: https://p-shop-28336.web.app/
-server: https://github.com/52atiq/parts-shop-client
+
+a
+
+server:https://github.com/52atiq/parts-shop-server
+
+
 client: https://github.com/52atiq/parts-shop-client
 
 <ul>
