@@ -1,6 +1,8 @@
 PARTS-SHOP
 
 Live Link: https://p-shop-28336.web.app/
+server: https://github.com/52atiq/parts-shop-client
+client: https://github.com/52atiq/parts-shop-client
 
 <ul>
 <li>This project about manufacturer product  like laptop parts keyboard, mouse ,ram etc</li>
