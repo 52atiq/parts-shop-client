@@ -31,7 +31,7 @@ const Blog = () => {
 
             <div className='mt-5'>
                 <h1 className='text-2xl font-semibold mb-4'>Q3: How does prototypical inheritance work?</h1>
-                <p>The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects .prototypical inheritance refers to the ability to access object properties from another object. Each object has a private property which holds a link to another object called its prototype.</p>
+                <p>The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects .prototypical inheritance refers to the ability to access object properties from another object. Each object has a private property which holds a link to another object called its Prototype.</p>
             </div>
 
 

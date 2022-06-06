@@ -19,7 +19,7 @@ const Navbar = () => {
         <li className='text-white' ><Link to="/">Home</Link></li>
       
         <li className='text-white'><Link to="/blog">Blog</Link></li>
-        {/* <li><Link to="/contact">Contact</Link></li> */}
+       
         <li className='text-white' ><Link to="/portfolio">Portfolio</Link></li>
         {
             user && <li className='text-white'><Link to="/dashboard">Dashboard</Link></li>
